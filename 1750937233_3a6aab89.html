@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司财报与电子发票展示</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Arial', sans-serif;
+        }
+        .highlight {
+            border: 2px solid rgba(80, 184, 163, 0.5);
+            border-radius: 8px;
+        }
+        .data-box {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold mb-2">上市公司财报与电子发票</h1>
+            <h2 class="text-xl text-gray-600">最新财报数据分析</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="data-box highlight">
+                <h2 class="text-2xl font-semibold">电子发票信息</h2>
+                <p>发票号码: <strong>25349134114000026713</strong></p>
+                <p>开票日期: <strong>2025年06月05日</strong></p>
+                <p>出发车站: <strong>巢湖东站 (Chaohudong)</strong></p>
+                <p>到达车站: <strong>合肥南站 (Hefeinan)</strong></p>
+                <p>发车时间: <strong>2025年01月08日 13:41</strong></p>
+                <p>车次信息: <strong>08车10D号</strong></p>
+                <p>座位类型: <strong>二等座</strong></p>
+                <p>票价: <strong>￥34.00</strong></p>
+                <p>电子客票号: <strong>3411461086010996769292025</strong></p>
+            </div>
+
+            <div class="data-box highlight">
+                <h2 class="text-2xl font-semibold">财报数据展示</h2>
+                <div class="mt-4">
+                    <p>2025年Q1 营收分析:</p>
+                    <ul>
+                        <li>总营收: <strong>￥1,000,000,000</strong></li>
+                        <li>净利润: <strong>￥250,000,000</strong></li>
+                        <li>总资产: <strong>￥5,000,000,000</strong></li>
+                    </ul>
+                    <footer class="text-sm text-gray-500">数据来源: 公司财务部</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // GSAP 动效
+        gsap.from("h1", { duration: 1, y: -50, opacity: 0, stagger: 0.3 });
+        gsap.from(".data-box", { duration: 1, y: 30, opacity: 0, stagger: 0.3, delay: 0.5 });
+    </script>
+</body>
+</html>
