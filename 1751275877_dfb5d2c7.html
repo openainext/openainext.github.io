@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌龙茶 - 优雅复古风格</title>
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F5F0E6;
+            --text-color: #5D4037;
+            --accent-color: #8B0000;
+            --gold-color: #D4AF37;
+            --light-accent: #D7CCC8;
+        }
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Noto Serif SC', serif;
+            color: var(--text-color);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .vintage-border {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264.888-.14 1.24.916 1.5 2.905 2.462 4.077.524.614.878.727 1.54.727.804 0 1.31-.453 1.804-1.086.87-.13.963-.526.963-.766 0-.24-.086-.526-.265-.915.956-.3 1.548-.877 2.17-1.614.563-.665.944-1.333 1.398-2.144.365-.664.81-1.17 1.21-1.895.496-.905.774-1.845 1.15-2.848.254-.664.47-1.235.8-1.928.467-.926.82-1.824 1.35-2.775.47-.815.81-1.43 1.33-2.245.395-.615.77-1.235 1.3-1.864.453-.53.898-1.07 1.462-1.54.564-.47.878-.706 1.54-.706.664 0 1.065.315 1.53.815.465.5.815 1.036 1.23 1.664.415.628.63 1.21.92 1.957.39.956.775 1.854 1.14 2.815.254.664.47 1.235.795 1.928.496.905.775 1.845 1.15 2.848.365.664.81 1.17 1.21 1.895.453.81.835 1.478 1.398 2.144.62.737 1.214 1.314 2.17 1.614-.18.39-.265.676-.265.915 0 .24.093.636.963.766.495.633 1 .995 1.804.995.664 0 1.016-.113 1.54-.727.963-1.172 1.22-3.16.24-4.077-.168-.12-.53-.01-.888.14.015-.495.03-.99.03-1.485 0-4.98-3.98-9-9-9s-9 4.02-9 9c0 .495.015.99.03 1.485zm-5.304 0c.015-.495.03-.99.03-1.485 0-4.98-3.98-9-9-9s-9 4.02-9 9c0 .495.015.99.03 1.485.357-.13.72-.264.888-.14 1.24.916 1.5 2.905 2.462 4.077.524.614.878.727 1.54.727.804 0 1.31-.453 1.804-1.086.87-.13.963-.526.963-.766 0-.24-.086-.526-.265-.915.956-.3 1.548-.877 2.17-1.614.563-.665.944-1.333 1.398-2.144.365-.664.81-1.17 1.21-1.895.496-.905.774-1.845 1.15-2.848.254-.664.47-1.235.8-1.928.467-.926.82-1.824 1.35-2.775.47-.815.81-1.43 1.33-2.245.395-.615.77-1.235 1.3-1.864.453-.53.898-1.07 1.462-1.54.564-.47.878-.706 1.54-.706.664 0 1.065.315 1.53.815.465.5.815 1.036 1.23 1.664.415.628.63 1.21.92 1.957.39.956.775 1.854 1.14 2.815.254.664.47 1.235.795 1.928.496.905.775 1.845 1.15 2.848.365.664.81 1.17 1.21 1.895.453.81.835 1.478 1.398 2.144.62.737 1.214 1.314 2.17 1.614-.18.39-.265.676-.265.915 0 .24.093.636.963.766.495.633 1 .995 1.804.995.664 0 1.016-.113 1.54-.727.963-1.172 1.22-3.16.24-4.077-.168-.12-.53-.01-.888.14z' fill='%23D4AF37' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 100px 20px;
+        }
+        .vintage-initial::first-letter {
+            font-size: 3.5em;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: var(--gold-color);
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+        }
+        .tea-leaf::before {
+            content: "• ";
+            color: var(--gold-color);
+            font-weight: bold;
+        }
+        .corner-decoration {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-style: solid;
+            border-color: var(--gold-color);
+            border-width: 1px 0 0 1px;
+            opacity: 0.5;
+        }
+        .corner-decoration.bottom-right {
+            bottom: 0;
+            right: 0;
+            border-width: 0 1px 1px 0;
+        }
+    </style>
+</head>
+<body class="flex justify-center p-4">
+    <div class="relative w-full max-w-[440px] bg-[var(--bg-color)] shadow-xl p-8 border border-[var(--light-accent)] rounded-sm overflow-hidden">
+        <!-- 角落装饰 -->
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <!-- 日期区域 -->
+        <div class="text-right mb-4 text-[var(--accent-color)] opacity-80">
+            <span class="text-sm italic">JUIN 2024 • N°187</span>
+        </div>
+
+        <!-- 顶部花纹分隔线 -->
+        <div class="vintage-border h-10 my-2"></div>
+
+        <!-- 标题区域 -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-[var(--text-color)] mb-2 tracking-tight vintage-initial">乌龙茶</h1>
+            <p class="text-lg text-[var(--accent-color)] italic ml-1">L'ART DU THÉ OOLONG</p>
+        </div>
+
+        <!-- 引用区块 -->
+        <div class="my-8 p-5 border-l-4 border-[var(--gold-color)] bg-[rgba(212,175,55,0.05)] italic">
+            <p class="text-[var(--text-color)]">"Le thé oolong, entre vert et noir, comme une danse subtile des feuilles suspendue dans le temps."
+            <br><span class="text-right block mt-2 text-sm opacity-70">— L'ENCYCLOPÉDIE DU THÉ, 1928</span></p>
+        </div>
+
+        <!-- 核心要点列表 -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-4 text-[var(--text-color)] border-b border-[var(--light-accent)] pb-1">Caractéristiques Essentielles</h2>
+            <ul class="space-y-3 pl-2">
+                <li class="tea-leaf text-[var(--text-color)]">Origine : Principaux producteurs sont la Chine (Fujian, Guangdong) et Taïwan</li>
+                <li class="tea-leaf text-[var(--text-color)]">Oxydation : Entre 10% et 70%, offrant une palette aromatique variée</li>
+                <li class="tea-leaf text-[var(--text-color)]">Processus : Shaqing (élimination de l'enzyme), Rougui (torsion), Wei Dui (oxydation contrôlée)</li>
+                <li class="tea-leaf text-[var(--text-color)]">Saveurs : De la fraîcheur verte aux notes torréfiées, avec des nuances de fruits, de fleurs ou de miel</li>
+                <li class="tea-leaf text-[var(--text-color)]">Infusion : Eau à 85-95°C, temps de trempage variable selon l'oxydation (30s à 3min)</li>
+            </ul>
+        </div>
+
+        <!-- 二维码区域 -->
+        <div class="flex justify-end mb-6">
+            <div class="p-3 bg-white border border-[var(--light-accent)] shadow-sm">
+                <div class="w-24 h-24 bg-gray-100 flex items-center justify-center">
+                    <!-- 占位二维码 -->
+                    <i class="fas fa-qrcode text-4xl text-[var(--text-color)] opacity-30"></i>
+                </div>
+                <p class="text-xs text-center mt-1 text-[var(--text-color)] opacity-70">DÉCOUVREZ PLUS</p>
+            </div>
+        </div>
+
+        <!-- 编辑笔记 -->
+        <div class="mt-8 pt-4 border-t border-[var(--light-accent)] text-sm italic text-[var(--text-color)] opacity-80">
+            <p><i class="fas fa-pen-fancy mr-2 text-[var(--gold-color)]"></i>Conseil de l'éditeur : Les thés oolong de haute montagne taiwanais se prêtent particulièrement à la méthode de l'infusion gongfu, permettant de déguster jusqu'à 8 à 10 infusions successives, chacune révélant des arômes différents.</p>
+        </div>
+
+        <!-- 底部花纹分隔线 -->
+        <div class="vintage-border h-10 my-4 transform rotate-180"></div>
+    </div>
+</body>
+</html>
