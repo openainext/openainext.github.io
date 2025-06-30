@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌龙茶 - 优雅复古风格</title>
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vintage-bg: #F5F0E6;
+            --vintage-text: #3A2E28;
+            --vintage-accent: #8B3A3A;
+            --vintage-gold: #D4AF37;
+            --vintage-border: #A67C52;
+        }
+        .vintage-paper {
+            background-color: var(--vintage-bg);
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23a67c52' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .vintage-border {
+            border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none' stroke='%23A67C52' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E") 1 repeat;
+        }
+        .initial-drop::first-letter {
+            initial-letter: 3;
+            color: var(--vintage-accent);
+            font-weight: 700;
+            margin-right: 0.2em;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        .vintage-qrcode-frame {
+            position: relative;
+        }
+        .vintage-qrcode-frame::before,
+        .vintage-qrcode-frame::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: var(--vintage-gold);
+            border-style: solid;
+        }
+        .vintage-qrcode-frame::before {
+            top: -5px;
+            left: -5px;
+            border-width: 1px 0 0 1px;
+        }
+        .vintage-qrcode-frame::after {
+            bottom: -5px;
+            right: -5px;
+            border-width: 0 1px 1px 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center p-4">
+    <div class="w-[440px] vintage-paper rounded-sm shadow-xl overflow-hidden fade-in" style="animation-delay: 0.1s;">
+        <!-- 顶部装饰条 -->
+        <div class="h-1 bg-gradient-to-r from-transparent via-vintage-accent to-transparent"></div>
+
+        <!-- 日期区域 -->
+        <div class="px-8 pt-6 text-right">
+            <p class="text-vintage-text/70 text-sm font-serif italic">JUIN 30, 2025 | 09:41</p>
+        </div>
+
+        <!-- 标题区域 -->
+        <div class="px-8 pt-2 relative">
+            <h1 class="text-[clamp(2.5rem,8vw,3.5rem)] font-serif font-bold text-vintage-accent leading-tight tracking-tighter">乌龙茶</h1>
+            <div class="h-0.5 w-24 bg-vintage-gold mt-2 mb-4"></div>
+            <p class="text-vintage-text/80 text-lg italic font-serif">L'Art du Thé Oolong</p>
+            <!-- 角落装饰 -->
+            <div class="absolute -top-4 -right-4 w-16 h-16 opacity-10">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0C15 25 35 45 50 50C35 55 15 75 0 100Z" fill="#8B3A3A"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- 引用区块 -->
+        <div class="px-8 pt-4 pb-2">
+            <div class="border-l-2 border-vintage-border pl-4 italic text-vintage-text/80 font-serif">
+                <p class="text-lg">"一瓯春露香能永，万里清风意已便"</p>
+                <p class="text-right text-sm mt-1">— 宋代·苏轼</p>
+            </div>
+        </div>
+
+        <!-- 核心内容区域 -->
+        <div class="px-8 pt-2 pb-4">
+            <p class="initial-drop text-vintage-text font-serif leading-relaxed">
+                乌龙茶，亦称青茶，是中国特有的半发酵茶类，介于绿茶与红茶之间。其独特的制作工艺赋予了它绿茶的清香与红茶的醇厚，形成了层次丰富的味觉体验。
+            </p>
+
+            <!-- 核心要点列表 -->
+            <div class="mt-6">
+                <h3 class="text-vintage-accent font-serif font-semibold mb-3 flex items-center">
+                    <i class="fas fa-leaf mr-2 text-vintage-gold"></i> 品鉴要点
+                </h3>
+                <ul class="space-y-2 text-vintage-text/90">
+                    <li class="flex items-start">
+                        <span class="text-vintage-gold mr-2">❦</span>
+                        <span><strong class="text-vintage-accent">起源</strong>：福建武夷山为发源地，至今已有数百年历史</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-vintage-gold mr-2">❦</span>
+                        <span><strong class="text-vintage-accent">种类</strong>：铁观音、大红袍、凤凰单丛、冻顶乌龙为四大名品</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-vintage-gold mr-2">❦</span>
+                        <span><strong class="text-vintage-accent">工艺</strong>：摇青促进发酵，杀青停止氧化，揉捻塑造外形</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-vintage-gold mr-2">❦</span>
+                        <span><strong class="text-vintage-accent">冲泡</strong>：水温90-95℃，盖碗冲泡，3-5分钟出汤为佳</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-vintage-gold mr-2">❦</span>
+                        <span><strong class="text-vintage-accent">风味</strong>：花香馥郁，回甘持久，兼具清新鲜爽与醇厚绵柔</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 编辑笔记与二维码区域 -->
+        <div class="px-8 pt-2 pb-8 flex flex-col md:flex-row gap-6">
+            <!-- 编辑笔记 -->
+            <div class="w-full md:w-2/3 bg-white/40 p-4 border border-vintage-border/20 rounded-sm">
+                <h4 class="text-vintage-accent font-serif text-sm uppercase tracking-wider mb-2">编辑笔记</h4>
+                <p class="text-vintage-text/80 text-sm font-serif italic leading-relaxed">
+                    "上等乌龙茶叶片完整，色泽墨绿润泽带褐黄。冲泡后叶片舒展，边缘红中间绿，俗称'绿叶红镶边'。品饮时宜细啜慢咽，方能体会其'七泡有余香'之妙。"
+                </p>
+            </div>
+
+            <!-- 二维码区域 -->
+            <div class="w-full md:w-1/3 flex items-center justify-center">
+                <div class="vintage-qrcode-frame p-3 bg-white shadow-md">
+                    <img src="https://pic.readnow.pro/2025/03/791e29affc7772652c01be54b92e8c43.jpg" alt="二维码" class="w-32 h-32 object-contain"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部装饰 -->
+        <div class="h-1 bg-gradient-to-r from-transparent via-vintage-accent to-transparent mb-4"></div>
+        <div class="text-center text-xs text-vintage-text/50 font-serif pb-4">
+            <p>ART DE VIVRE • THÉS DE L'EST • 2025</p>
+        </div>
+    </div>
+</body>
+</html>
