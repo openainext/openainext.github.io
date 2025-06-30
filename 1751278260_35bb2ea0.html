@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌龙茶杂志风格知识卡片</title>
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2A1A0A;
+            --secondary: #7D5A3C;
+            --accent: #D4A25A;
+            --background: #FFF8F0;
+            --text: #2A1A0A;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .magazine-card {
+            width: 440px;
+            max-height: 1280px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            background-color: var(--background);
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .date {
+            font-family: 'Noto Serif SC', serif;
+            letter-spacing: 1px;
+            color: var(--secondary);
+        }
+        
+        .title {
+            font-family: 'Noto Serif SC', serif;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            color: var(--secondary);
+        }
+        
+        .quote {
+            border-left: 3px solid var(--accent);
+            font-family: 'Noto Serif SC', serif;
+            font-style: italic;
+        }
+        
+        .list-item:before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .editor-note {
+            background-color: rgba(212, 162, 90, 0.1);
+            border-left: 3px solid var(--accent);
+        }
+        
+        .qr-section {
+            position: relative;
+        }
+        
+        .qr-code {
+            transition: transform 0.3s ease;
+        }
+        
+        .qr-code:hover {
+            transform: scale(1.05);
+        }
+        
+        /* 优雅古典风格 - 日式极简 */
+        .japanese-minimalism {
+            background-color: #FCFCFC;
+            color: #222;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .japanese-minimalism .date {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: 300;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            height: 180px;
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #888;
+        }
+        
+        .japanese-minimalism .title {
+            font-size: 28px;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: 5px;
+        }
+        
+        .japanese-minimalism .subtitle {
+            display: none;
+        }
+        
+        .japanese-minimalism .divider {
+            width: 100px;
+            height: 1px;
+            background-color: #222;
+            margin: 40px 0;
+        }
+        
+        .japanese-minimalism .quote {
+            border: none;
+            font-size: 16px;
+            font-style: normal;
+            line-height: 2;
+            margin: 40px 0;
+            padding: 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .japanese-minimalism .key-points {
+            margin: 40px 0;
+        }
+        
+        .japanese-minimalism .list-item {
+            margin: 20px 0;
+            font-weight: 300;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .japanese-minimalism .list-item:before {
+            width: 4px;
+            height: 4px;
+            background-color: #222;
+            margin-right: 15px;
+        }
+        
+        .japanese-minimalism .qr-section {
+            margin-top: 60px;
+            align-self: flex-start;
+        }
+        
+        .japanese-minimalism .qr-code {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #eee;
+        }
+        
+        .japanese-minimalism .editor-note {
+            background: none;
+            border-left: 1px solid #222;
+            padding: 0 0 0 15px;
+            margin-top: the 40px;
+            font-size: 12px;
+            color: #888;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- 日式极简风格卡片 -->
+    <div class="magazine-card japanese-minimalism">
+        <div class="date">2025年06月30日</div>
+        <h1 class="title">乌龙茶</h1>
+        <div class="divider"></div>
+        
+        <blockquote class="quote">
+            介于绿茶与红茶之间的半发酵茶，色泽青褐，香气馥郁，兼具花香与果香，入口滋味醇厚回甘。
+        </blockquote>
+        
+        <div class="key-points">
+            <div class="list-item">原产于中国福建，距今已有数百年历史</div>
+            <div class="list-item">发酵程度约10%-70%，品种繁多</div>
+            <div class="list-item">代表品种：铁观音、大红袍、冻顶乌龙</div>
+            <div class="list-item">冲泡水温：95-100℃，可多次冲泡</div>
+            <div class="list-item">含有茶多酚、茶氨酸等活性物质</div>
+        </div>
+        
+        <div class="qr-section">
+            <img class="qr-code" src="https://cdn2.weimob.com/static/aiwork365-creation-web/@online/v1.0.2/assets/cm-BPt0IfnV.png" alt="扫码了解更多">
+        </div>
+        
+        <div class="editor-note mt-10">
+            <p>编辑笔记：乌龙茶的魅力在于其丰富的层次感与平衡之美，每一泡都是一次味觉探索之旅。选择紫砂壶或盖碗，更能体会其韵味变化。</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 页面加载完成后的微妙动效
+            const cards = document.querySelectorAll('.magazine-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
